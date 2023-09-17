@@ -1,0 +1,100 @@
+.wallpaper{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('/wallpaper.jpg');
+    background-size: cover;
+    opacity: 0.45;
+    z-index: -99;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+/* header */
+
+
+.navigation{
+    display: inherit;
+    width: 100%;
+    justify-content: end;
+    align-items: inherit;
+    background-color: rgba(0,0,0,0.5);
+    padding: 1rem 1.5rem;
+}
+
+.navigation div{
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+}
+
+.navigation div a{
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: white;
+    transition: 0.2s ease-in
+}
+
+.navigation div a:hover{
+    color: gray;
+    transition: 0.2s ease-out
+}
+
+/* home content */
+
+.home{
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+.home div{
+    padding: inherit;
+}
+
+.home div h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.70rem;
+}
+
+.photo{
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* about content */
+
+/* project content */
+
+/* footer content */
+.footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    display: inherit;
+    justify-content: space-between;
+    align-items: inherit;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.footer div{
+    padding: 0.5rem 1rem;
+}
+
+.footer div a{
+    text-decoration: none;
+    color: gray;
+    transition: 0.2s ease-in
+}
+
+.footer div a:hover{
+    text-decoration: underline;
+    color: white;
+    transition: 0.2s ease-out
+}
