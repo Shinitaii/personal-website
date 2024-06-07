@@ -12,9 +12,9 @@ export default function Home() {
         <Link href='#about'>Projects</Link>
       </div>
       <div className='flex justify-evenly w-1/2'>
-        <a href='https://github.com/Shinitaii'>Github</a>
-        <a href='https://www.linkedin.com/in/richmond-glenn-viloria/'>LinkedIn</a>
-        <a href='mailto:rgviloria1@gmail.com'>Email</a>
+        <a href='https://github.com/Shinitaii'>G</a>
+        <a href='https://www.linkedin.com/in/richmond-glenn-viloria/'>L</a>
+        <a href='mailto:rgviloria1@gmail.com'>E</a>
       </div>
     </main>
   );
