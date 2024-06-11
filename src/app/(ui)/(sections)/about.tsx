@@ -8,6 +8,9 @@ import { RiNextjsFill } from "react-icons/ri";
 
 import NavLink from "../components/nav-link";
 import Image from 'next/image';
+import AboutIntro from "../components/about/intro";
+import AboutDetails from "../components/about/about";
+import AboutTechnologies from "../components/about/technologies";
 
 interface AboutSectionProps {
     navigate: Dispatch<SetStateAction<string>>;
@@ -60,33 +63,25 @@ const AboutSection : React.FC<AboutSectionProps> = ({navigate}) => {
       <div className='absolute w-fit p-8'>
       <NavLink title={<FaChevronLeft size={isMobile ? 40 : 20}/>} href={""} onPressed={() => navigate('home')} animation="hover:-translate-x-2 focus:-translate-x-2 active:-translate-x-2"></NavLink>
       </div>
-      <div className='w-full h-screen flex flex-col justify-evenly items-center'>
-        <div className='w-fit flex flex-col justify-center items-center'>
-          <Image src='/richmond-photo.jpg' height={isMobile ? 200 : 150} width={isMobile ? 200 : 150} alt='richmond' className="m-2 rounded-full"/>
-          <p className='font-bold'>Richmond Glenn Viloria</p>
-          <p>An aspiring software engineer</p>
-        </div>
-        <hr className="h-px w-3/4 my-2"/>
-        <div className='mx-8 flex justify-center items-center text-pretty flex-col'>
-          <p className='sm:text-base text-sm'>
-            Since 2018, I have started <span className='font-bold'>programming as a passion</span>, 
-            and over the course of years have developed skill required to become a <span className='font-bold'>software developer</span>.
-          </p>
-          <p className='sm:text-base text-sm'>
-            Since 2022, I am currently studying at the <span className='font-bold'>University of Makati</span>, 
-            taking the Bachelor&apos;s course of <span className="font-bold">Computer Science</span>.
-          </p>
-          <p className='sm:text-base text-sm'>I primarily focus on developing <span className="font-bold">websites</span>, <span className="font-bold">mobile applications</span>, and took <span className="font-bold">game development</span> as a hobby.</p>
-        </div>
-        <hr className="h-px w-3/4 my-2"/>
-        <div className="mx-8">
-          <p className='font-bold'>Technologies</p>
-          <div className='flex flex-wrap justify-center items-center'>
-            {technologies.map((tech, index) => (
-              <NavLink title={<tech.icon size={30}/>} href={''} key={index} className='m-2'/>
-            ))}
+      <div className='w-full h-screen flex md:flex-row flex-col justify-evenly items-center'>
+      {isMobile ? (
+        <>
+          <div className='flex flex-col justify-evenly items-center'>
+            <AboutIntro isMobile={isMobile}/>
+            <hr className="h-px w-3/4 my-2"/>
+            <AboutTechnologies technologies={technologies} size={40}/>
           </div>
-        </div>
+          <AboutDetails isMobile={isMobile}/>
+        </>
+        ) : (
+          <div className='flex flex-col md:flex-row justify-evenly items-center'>
+            <AboutIntro isMobile={isMobile}/>
+            <hr className="h-px w-3/4 my-2"/>
+            <AboutDetails isMobile={isMobile}/>
+            <hr className="h-px w-3/4 my-2"/>
+            <AboutTechnologies technologies={technologies} size={30}/>
+          </div>
+        )}
       </div>
     </div>
   )
