@@ -2,21 +2,10 @@
 import { useEffect, useState } from "react";
 import HomeSection from "./(ui)/(sections)/home";
 import AboutSection from "./(ui)/(sections)/about";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState<string>('home');
-  const [isLoading, setIsLoading] = useState<boolean>(true)
-
-  const renderLoad = () => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 500);
-  }
-
-  useEffect(() => {
-    renderLoad();
-  },[currentSection]);
 
   const renderStation = () => {
     switch (currentSection) {
@@ -33,7 +22,14 @@ export default function Home() {
 
   return ( 
     <main className="">
-      {isLoading ? <div className='w-full h-screen flex justify-center items-center'>Loading...</div> : renderStation()}
+        <motion.div
+          key={currentSection}
+          initial={{ opacity: 0, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ ease: 'easeInOut', duration: 0.75, delay: 0.5 }}
+        >
+          {renderStation()}
+        </motion.div>
     </main>
   );
 }
