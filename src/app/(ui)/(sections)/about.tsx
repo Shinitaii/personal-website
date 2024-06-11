@@ -74,7 +74,7 @@ const AboutSection : React.FC<AboutSectionProps> = ({navigate}) => {
           </p>
           <p className='sm:text-base text-sm'>
             Since 2022, I am currently studying at the <span className='font-bold'>University of Makati</span>, 
-            taking the Bachelor's course of <span className="font-bold">Computer Science</span>.
+            taking the Bachelor&apos;s course of <span className="font-bold">Computer Science</span>.
           </p>
           <p className='sm:text-base text-sm'>I primarily focus on developing <span className="font-bold">websites</span>, <span className="font-bold">mobile applications</span>, and took <span className="font-bold">game development</span> as a hobby.</p>
         </div>
