@@ -33,7 +33,7 @@ export default function Home() {
 
   return ( 
     <main className="">
-      {isLoading ? <div className='w-full h-screen flex justify-center items-center'>Loading...</div> : renderStation()};
+      {isLoading ? <div className='w-full h-screen flex justify-center items-center'>Loading...</div> : renderStation()}
     </main>
   );
 }
