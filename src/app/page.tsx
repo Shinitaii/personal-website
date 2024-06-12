@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import HomeSection from "./(ui)/(sections)/home";
 import AboutSection from "./(ui)/(sections)/about";
 import { motion } from "framer-motion";
+import WorksSection from "./(ui)/(sections)/works";
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState<string>('home');
@@ -14,7 +15,7 @@ export default function Home() {
       case 'about':
         return <AboutSection navigate={setCurrentSection} />;
       case 'works':
-        return <HomeSection navigate={setCurrentSection} />
+        return <WorksSection navigate={setCurrentSection} />
       default:
         return <HomeSection navigate={setCurrentSection} />;
     }

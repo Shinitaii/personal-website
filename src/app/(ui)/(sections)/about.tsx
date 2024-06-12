@@ -68,17 +68,17 @@ const AboutSection : React.FC<AboutSectionProps> = ({navigate}) => {
         <>
           <div className='flex flex-col justify-evenly items-center'>
             <AboutIntro isMobile={isMobile}/>
-            <hr className="h-px w-3/4 my-2"/>
-            <AboutTechnologies technologies={technologies} size={40}/>
+            <hr className="h-px w-3/4 md:my-4 my-2 border-yellow-300"/>
+            <AboutTechnologies technologies={technologies} size={35}/>
           </div>
           <AboutDetails isMobile={isMobile}/>
         </>
         ) : (
           <div className='flex flex-col md:flex-row justify-evenly items-center'>
             <AboutIntro isMobile={isMobile}/>
-            <hr className="h-px w-3/4 my-2"/>
+            <hr className="h-px w-3/4 md:my-4 my-2 border-yellow-300"/>
             <AboutDetails isMobile={isMobile}/>
-            <hr className="h-px w-3/4 my-2"/>
+            <hr className="h-px w-3/4 md:my-4 my-2 border-yellow-300"/>
             <AboutTechnologies technologies={technologies} size={30}/>
           </div>
         )}
