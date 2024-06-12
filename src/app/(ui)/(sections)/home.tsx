@@ -25,7 +25,7 @@ const HomeSection  : React.FC<HomeSectionProps> = ({navigate}) => {
 
     return (
         <div className="w-full h-screen flex flex-col justify-center items-center">
-            <div className="w-1/2 flex md:justify-evenly justify-between items-end lg">
+            <div className="md:w-1/2 w-3/5 flex md:justify-evenly justify-between items-end lg">
                 <NavLink href='' title='About' onPressed={() => navigate('about')} y={20} delay={1.25}/>
                 <motion.div
                   initial={{y: 20, opacity: 0}}
@@ -36,8 +36,8 @@ const HomeSection  : React.FC<HomeSectionProps> = ({navigate}) => {
                 </motion.div>
                 <NavLink href='' title='Works' onPressed={() => navigate('works')} y={20} delay={1.5}/>
             </div>
-            <hr className="h-px w-1/2 md:my-4 my-2 border-yellow-300"/>
-            <div className='flex justify-evenly w-3/5'>
+            <hr className="h-px md:w-1/2 w-3/4  md:my-4 my-2 border-yellow-300"/>
+            <div className='flex justify-evenly md:w-3/5 w-4/5'>
               <NavLink href='https://github.com/Shinitaii' title={<FaGithub size={isMobile ? 65 : 30}/>} animation="hover:translate-y-2 hover:scale-110 focus:translate-y-2 active:translate-y-2 focus:scale-110 active:scale-110" y={-20} delay={1.75}/>
               <NavLink href='https://www.linkedin.com/in/richmond-glenn-viloria/' title={<FaLinkedin size={isMobile ? 65 : 30}/>} animation="hover:translate-y-2 hover:scale-110 focus:translate-y-2 active:translate-y-2 focus:scale-110 active:scale-110" y={-20} delay={2}/>
               <NavLink href='mailto:rgviloria1@gmail.com' title={<FaEnvelope size={isMobile ? 65 : 30}/>} animation="hover:translate-y-2 hover:scale-110 focus:translate-y-2 active:translate-y-2 focus:scale-110 active:scale-110" y={-20} delay={2.25}/>
