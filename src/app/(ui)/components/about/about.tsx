@@ -31,12 +31,12 @@ const AboutDetails : React.FC<AboutDetailsProps> = ({isMobile}) => {
                 Since 2022, I am currently studying at the <span className='font-bold'>University of Makati</span>, 
                 taking the Bachelor&apos;s course of <span className="font-bold">Computer Science Major in Application Development</span>.
             </p>
-            <p className='md:text-lg text-sm text-justify' style={{ textAlignLast: 'justify' }}>
+            <p className='md:text-lg text-sm text-justify'>
                 I primarily focus on developing <span className="font-bold">websites</span>, 
                 <span className="font-bold"> mobile applications</span>, and took 
                 <span className="font-bold"> game development</span> as a hobby.
             </p>
-            <hr className="h-px w-3/4 my-2"/>
+            <hr className="h-px w-3/4 md:my-4 my-2 border-yellow-300"/>
             <p className='md:text-lg text-sm text-justify' style={{ textAlignLast: 'justify' }}>
                 I value continuous learning, momentum and exploring the latest trends in technology.
             </p>
