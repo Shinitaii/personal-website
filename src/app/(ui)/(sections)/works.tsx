@@ -7,6 +7,7 @@ import { SiCsharp, SiDart, SiExpress, SiMysql, SiMongodb,  } from "react-icons/s
 import { RiNextjsFill } from "react-icons/ri";
 import Image from 'next/image'
 import { IconType } from "react-icons";
+import { motion } from "framer-motion";
 
 interface WorksSectionProps {
     navigate: Dispatch<SetStateAction<string>>;
@@ -21,6 +22,7 @@ const WorksSection : React.FC<WorksSectionProps> = ({navigate}) => {
     const [isMobile, setIsMobile] = useState<boolean>(false);
     const [currentProjectIndex, setCurrentProjectIndex] = useState<number>(0);
     const [currentPhotoIndex, setCurrentPhotoIndex] = useState<number>(0);
+    const [isClickDisabled, setIsClickDisabled] = useState<boolean>(false);
 
     const handleResize = () => {
         setIsMobile(window.innerWidth >= 768);
@@ -106,30 +108,61 @@ const WorksSection : React.FC<WorksSectionProps> = ({navigate}) => {
     const currentProject = items[currentProjectIndex];
     const currentPhoto = currentProject.photos[currentPhotoIndex];
 
-    const navigateToNextProject = () => {
-        setCurrentProjectIndex((prevIndex) => (prevIndex + 1) % items.length);
-        setCurrentPhotoIndex(0);
-      };
-    
-    const navigateToPreviousProject = () => {
-        setCurrentProjectIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);
-        setCurrentPhotoIndex(0);
-    };
-    
     const navigateToNextPhoto = () => {
-        setCurrentPhotoIndex((prevIndex) => (prevIndex + 1) % currentProject.photos.length);
-    };
-    
-    const navigateToPreviousPhoto = () => {
-        setCurrentPhotoIndex((prevIndex) => (prevIndex - 1 + currentProject.photos.length) % currentProject.photos.length);
-    };
+  if (!isClickDisabled) {
+    setCurrentPhotoIndex((prevIndex) => (prevIndex + 1) % currentProject.photos.length);
+    setIsClickDisabled(true);
+    setTimeout(() => {
+      setIsClickDisabled(false);
+    }, 300); // Adjust the delay time (in milliseconds) as needed
+  }
+};
+
+const navigateToPreviousPhoto = () => {
+  if (!isClickDisabled) {
+    setCurrentPhotoIndex((prevIndex) => (prevIndex - 1 + currentProject.photos.length) % currentProject.photos.length);
+    setIsClickDisabled(true);
+    setTimeout(() => {
+      setIsClickDisabled(false);
+    }, 300); // Adjust the delay time (in milliseconds) as needed
+  }
+};
+
+const navigateToNextProject = () => {
+  if (!isClickDisabled) {
+    setCurrentProjectIndex((prevIndex) => (prevIndex + 1) % items.length);
+    setCurrentPhotoIndex(0); // Reset photo index when changing projects
+    setIsClickDisabled(true);
+    setTimeout(() => {
+      setIsClickDisabled(false);
+    }, 300); // Adjust the delay time (in milliseconds) as needed
+  }
+};
+
+const navigateToPreviousProject = () => {
+  if (!isClickDisabled) {
+    setCurrentProjectIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);
+    setCurrentPhotoIndex(0); // Reset photo index when changing projects
+    setIsClickDisabled(true);
+    setTimeout(() => {
+      setIsClickDisabled(false);
+    }, 300); // Adjust the delay time (in milliseconds) as needed
+  }
+};
 
     return (
         <div className="w-full h-screen flex flex-col">
           <div className='absolute w-fit p-8 z-10'>
             <NavLink title={<FaChevronLeft size={isMobile ? 40 : 20} />} href={""} onPressed={() => navigate('home')} animation="hover:-translate-x-2 focus:-translate-x-2 active:-translate-x-2"></NavLink>
           </div>
-          <div className='w-full h-screen flex flex-col justify-evenly items-center'>
+          <motion.div 
+                key={currentProjectIndex} // Ensure each project has a unique key
+                className='w-full h-screen flex flex-col justify-evenly items-center'
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ ease: 'easeInOut', duration: 0.5 }}
+            >
             <div className='w-4/5 h-2/5'>
               <div className='flex h-full justify-between items-center'>
                 <NavLink title={<FaChevronLeft size={20} />} href={""} onPressed={navigateToPreviousPhoto} />
@@ -145,7 +178,7 @@ const WorksSection : React.FC<WorksSectionProps> = ({navigate}) => {
                 <a href={currentProject.url} target="_blank" rel="noopener noreferrer">Link</a>
                 <div className='flex'>
                   {currentProject.technologies.map((tech : TechnologyProp, index : Key) => (
-                    <NavLink key={index} title={<tech.icon size={20} />} className="mx-1" href={""} />
+                    <NavLink key={index} title={<tech.icon size={25} />} className="mx-1" href={""} />
                   ))}
                 </div>
               </div>
@@ -153,7 +186,7 @@ const WorksSection : React.FC<WorksSectionProps> = ({navigate}) => {
             <div className='w-1/2 flex justify-center text-justify'>
               {currentProject.description}
             </div>
-          </div>
+          </motion.div>
           <div className='bottom-0 sticky m-8 flex justify-between items-center'>
             <NavLink title={<FaChevronLeft size={20} />} href={""} onPressed={navigateToPreviousProject} />
             <div className="flex flex-col items-center">
