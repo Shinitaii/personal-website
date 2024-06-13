@@ -8,6 +8,8 @@ import { RiNextjsFill } from "react-icons/ri";
 import Image from 'next/image'
 import { IconType } from "react-icons";
 import { motion } from "framer-motion";
+import ProjectCard from "../components/works/project-card";
+import ProjectNavigation from "../components/works/project-navigation";
 
 interface WorksSectionProps {
     navigate: Dispatch<SetStateAction<string>>;
@@ -155,46 +157,19 @@ const navigateToPreviousProject = () => {
           <div className='absolute w-fit p-8 z-10'>
             <NavLink title={<FaChevronLeft size={isMobile ? 40 : 20} />} href={""} onPressed={() => navigate('home')} animation="hover:-translate-x-2 focus:-translate-x-2 active:-translate-x-2"></NavLink>
           </div>
-          <motion.div 
-                key={currentProjectIndex} // Ensure each project has a unique key
-                className='w-full h-screen flex flex-col justify-evenly items-center'
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ ease: 'easeInOut', duration: 0.5 }}
-            >
-            <div className='w-4/5 h-2/5'>
-              <div className='flex h-full justify-between items-center'>
-                <NavLink title={<FaChevronLeft size={20} />} href={""} onPressed={navigateToPreviousPhoto} />
-                <div className='relative w-full h-full'>
-                  <Image src={currentPhoto} fill={true} alt='' />
-                </div>
-                <NavLink title={<FaChevronRight size={20} />} href={""} onPressed={navigateToNextPhoto} />
-              </div>
-              <div className='flex justify-center'>
-                {currentPhotoIndex + 1} / {currentProject.photos.length}
-              </div>
-              <div className='flex justify-between items-center'>
-                <NavLink href={currentProject.url} title='Git Repository' className='text-xs md:text-sm'/>
-                <div className='flex'>
-                  {currentProject.technologies.map((tech : TechnologyProp, index : Key) => (
-                    <NavLink key={index} title={<tech.icon size={25} />} className="mx-1" href={""} />
-                  ))}
-                </div>
-              </div>
-            </div>
-            <div className='w-1/2 flex justify-center text-justify text-xs'>
-              {currentProject.description}
-            </div>
-          </motion.div>
-          <div className='bottom-0 sticky m-8 flex justify-between items-center'>
-            <NavLink title={<FaChevronLeft size={20} />} href={""} onPressed={navigateToPreviousProject} />
-            <div className="flex flex-col items-center">
-              <p>{currentProject.name}</p>
-              <p>{currentProjectIndex + 1} / {items.length}</p>
-            </div>
-            <NavLink title={<FaChevronRight size={20} />} href={""} onPressed={navigateToNextProject} />
-          </div>
+          <ProjectCard 
+                project={currentProject} 
+                currentPhotoIndex={currentPhotoIndex} 
+                onNextPhoto={navigateToNextPhoto} 
+                onPreviousPhoto={navigateToPreviousPhoto} 
+            />
+          <ProjectNavigation
+                currentProjectIndex={currentProjectIndex}
+                totalProjects={items.length}
+                onPreviousProject={navigateToPreviousProject}
+                onNextProject={navigateToNextProject}
+                currentProjectName={currentProject.name}
+            />
         </div>
       );
 }
