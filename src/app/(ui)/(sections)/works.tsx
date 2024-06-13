@@ -40,7 +40,7 @@ const WorksSection : React.FC<WorksSectionProps> = ({navigate}) => {
     const items: Array<any> = [
         {
           name: 'OAS',
-          description: 'An online attendance system.',
+          description: 'An online attendance system. With two members and taking the lead developer role, this project is created in 2022 with the help of Java Swing libraries, it serves as the final project in our Capstone subject. This application allows teachers to record and track attendance toward students.',
           url: 'https://github.com/Shinitaii/attendance-system',
           photos: [''],
           technologies: [
@@ -50,7 +50,7 @@ const WorksSection : React.FC<WorksSectionProps> = ({navigate}) => {
         },
         {
           name: 'GymRAWR',
-          description: 'A gym management system.',
+          description: 'A gym management system. With four members and taking the lead developer role, this project is created in 2023 with the help of Java Swing libraries, it serves as the final project in our Computer Programming 2 subject. This application allows receptionists in the gym to track and maintain gym statuses such as check-in of members/guests, availability of trainers, and the maintenance of the gym equipment.',
           url: 'https://github.com/Shinitaii/gymrawr',
           photos: [''],
           technologies: [
@@ -60,7 +60,7 @@ const WorksSection : React.FC<WorksSectionProps> = ({navigate}) => {
         },
         {
           name: 'Archivary',
-          description: 'A library management system.',
+          description: 'A library management system. With five members and taking the lead back-end developer role, this project is created in 2024 using C# libraries, it serves as the final project in our Object-Oriented Programming subject. This application tracks available/unavailable books to be borrowed in a library, the users are also allowed to reserve and borrow books. ',
           url: 'https://github.com/Shinitaii/archivary',
           photos: [''],
           technologies: [
@@ -70,7 +70,7 @@ const WorksSection : React.FC<WorksSectionProps> = ({navigate}) => {
         },
         {
           name: 'Landlord Utility Tool',
-          description: 'A utility calculator website that helps calculate utilities.',
+          description: 'A utility calculator website that helps calculate utilities. A solo side-project, created in 2023, with the help of Next.js and its libraries. This website allow users to calculate utilities such as electricity and water.',
           url: 'https://github.com/Shinitaii/landlord-utility-tool',
           photos: [''],
           technologies: [
@@ -81,7 +81,7 @@ const WorksSection : React.FC<WorksSectionProps> = ({navigate}) => {
         },
         {
           name: 'Hanni Discord Bot',
-          description: 'A discord bot that sends Hanni from NewJeans phoning pictures.',
+          description: 'A discord bot that sends Hanni from NewJeans phoning pictures. A solo side-project created in 2023, with the help of Discord.js and Node.js.',
           url: 'https://github.com/Shinitaii/hanni-bot',
           photos: [''],
           technologies: [
@@ -92,7 +92,7 @@ const WorksSection : React.FC<WorksSectionProps> = ({navigate}) => {
         },
         {
           name: 'Deck',
-          description: 'A task management and flashcards system for students.',
+          description: 'A task management and flashcards system for students. With five members and taking the back-end developer role, this project is created in 2024 using Flutter and Flutterfire. This application serves as a tool for the productivity of the students, where they can manage the tasks, create decks and set flashcards for their upcoming exams/tasks.',
           url: 'https://github.com/Shinitaii/deck',
           photos: [''],
           technologies: [
@@ -175,7 +175,7 @@ const navigateToPreviousProject = () => {
                 {currentPhotoIndex + 1} / {currentProject.photos.length}
               </div>
               <div className='flex justify-between items-center'>
-                <a href={currentProject.url} target="_blank" rel="noopener noreferrer">Link</a>
+                <NavLink href={currentProject.url} title='Git Repository' className='text-xs md:text-sm'/>
                 <div className='flex'>
                   {currentProject.technologies.map((tech : TechnologyProp, index : Key) => (
                     <NavLink key={index} title={<tech.icon size={25} />} className="mx-1" href={""} />
@@ -183,7 +183,7 @@ const navigateToPreviousProject = () => {
                 </div>
               </div>
             </div>
-            <div className='w-1/2 flex justify-center text-justify'>
+            <div className='w-1/2 flex justify-center text-justify text-xs'>
               {currentProject.description}
             </div>
           </motion.div>
