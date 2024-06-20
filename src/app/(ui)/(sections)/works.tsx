@@ -89,12 +89,13 @@ const WorksSection : React.FC<WorksSectionProps> = ({navigate}) => {
           technologies: [
             { icon: IoLogoJavascript, name: 'JavaScript' },
             { icon: FaNodeJs, name: 'Node.js' },
-            { icon: SiExpress, name: 'Express' }
+            { icon: SiExpress, name: 'Express' },
+            { icon: SiMongodb, name: 'MongoDB' }
           ]
         },
         {
           name: 'Deck',
-          description: 'A task management and flashcards system for students. With five members and taking the back-end developer role, this project is created in 2024 using Flutter and Flutterfire. This application serves as a tool for the productivity of the students, where they can manage the tasks, create decks and set flashcards for their upcoming exams/tasks.',
+          description: 'A task management and flashcards system for students. A final project for our Applications Development and Emerging Technologies course. With five members and taking the back-end developer role, this project is created in 2024 using Flutter and Flutterfire. This application serves as a tool for the productivity of the students, where they can manage the tasks, create decks and set flashcards for their upcoming exams/tasks.',
           url: 'https://github.com/Shinitaii/deck',
           photos: [''],
           technologies: [
@@ -158,6 +159,7 @@ const navigateToPreviousProject = () => {
             <NavLink title={<FaChevronLeft size={isMobile ? 40 : 20} />} href={""} onPressed={() => navigate('home')} animation="hover:-translate-x-2 focus:-translate-x-2 active:-translate-x-2"></NavLink>
           </div>
           <ProjectCard 
+                isMobile={isMobile}
                 project={currentProject} 
                 currentPhotoIndex={currentPhotoIndex} 
                 onNextPhoto={navigateToNextPhoto} 

@@ -18,16 +18,24 @@ const PhotoNavigation: React.FC<PhotoNavigationProps> = ({
     onNextPhoto,
 }) => (
     <>
-        <div className='flex h-full justify-between items-center'>
-            <NavLink title={<FaChevronLeft size={20} />} href={""} onPressed={onPreviousPhoto} />
-            <div className='relative w-full h-full'>
-                <Image src={currentPhoto} fill={true} alt='' />
+    {totalPhotos < 1 ?
+        <>
+            <div className='flex h-full justify-between items-center'>
+                <NavLink title={<FaChevronLeft size={20} />} href={""} onPressed={onPreviousPhoto} />
+                <div className='relative w-full h-full flex justify-center items-center'>
+                    <Image src={currentPhoto} fill={true} alt='' />
+                </div>
+                <NavLink title={<FaChevronRight size={20} />} href={""} onPressed={onNextPhoto} />
             </div>
-            <NavLink title={<FaChevronRight size={20} />} href={""} onPressed={onNextPhoto} />
+            <div className='flex justify-center'>
+                {currentPhotoIndex + 1} / {totalPhotos}
+            </div>
+        </>
+    :
+        <div className="flex h-full justify-center items-center">
+            <p className='text-xs md:text-xl'>No photos provided.</p>
         </div>
-        <div className='flex justify-center'>
-            {currentPhotoIndex + 1} / {totalPhotos}
-        </div>
+    }
     </>
 );
 
