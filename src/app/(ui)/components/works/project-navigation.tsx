@@ -16,7 +16,7 @@ const ProjectNavigation: React.FC<ProjectNavigationProps> = ({
     onNextProject,
     currentProjectName,
 }) => (
-    <div className='bottom-0 sticky md:m-8 m-4 flex justify-between items-center'>
+    <div className='bottom-0 sticky md:m-0 md:p-8 m-4 flex md:w-1/2 justify-between items-center'>
         <NavLink title={<FaChevronLeft size={20} />} href={""} onPressed={onPreviousProject} />
         <div className="flex flex-col items-center">
             <p>{currentProjectName}</p>
