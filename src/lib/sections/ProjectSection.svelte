@@ -53,6 +53,16 @@
       reason: "Final project for a 2023 subject, designed to modernize library workflows and improve accessibility."
     },
     {
+      title: "Utilitool",
+      image: "",
+      techStack: ["Next.js", "React", "Firebase", "Express", "TypeScript"],
+      platform: "Website",
+      period: "2023",
+      role: "Lead Developer",
+      desc: "A web-based utility calculator for landlords, automating the calculation and tracking of tenant utility costs with a clean dashboard.",
+      reason: "Commissioned by a landlord client as a freelance project to simplify property management."
+    },
+    {
       title: "Deck Mobile",
       image: "",
       techStack: ["Flutter", "Dart", "Firebase"],
@@ -63,14 +73,14 @@
       reason: "Built for a 2023 subject, inspired by the need for effective, on-the-go study aids for students."
     },
     {
-      title: "Utilitool",
+      title: "Ventify",
       image: "",
-      techStack: ["Next.js", "React", "Firebase", "Express", "TypeScript"],
+      techStack: ["Next.js", "React", "MongoDB"],
       platform: "Website",
-      period: "2023",
+      period: "2024",
       role: "Lead Developer",
-      desc: "A web-based utility calculator for landlords, automating the calculation and tracking of tenant utility costs with a clean dashboard.",
-      reason: "Commissioned by a landlord client as a freelance project to simplify property management."
+      desc: "A web-based anonymous social media that posts anything you want to rant about.",
+      reason: "A self-project in learning about the ecosystem in terms of website backend"
     },
     {
       title: "Through The Woods",
@@ -86,7 +96,7 @@
       title: "Deck Website + API",
       image: "",
       techStack: ["CodeIgniter", "HTML", "CSS", "JavaScript", "PHP", "Express", "TypeScript", "Firebase"],
-      platform: "Mobile",
+      platform: "Website + API",
       period: "2025",
       role: "Fullstack Developer",
       desc: "The admin web portal and API for the Deck app, enabling administrators to manage users, content, and analytics with robust backend services.",
