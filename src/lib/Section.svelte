@@ -1,16 +1,20 @@
-<script lang='ts'>
-    export let id: string = ""
-    export let title: string
-    export let inner: boolean = false
+<script lang="ts">
+	export let id: string = '';
+	export let title: string;
+	export let inner: boolean = false;
 </script>
 
-<div id={id} class='p-8'>
-  <div class={`${inner ? 'w-full' : 'w-1/2'} mx-auto my-2 p-4 flex flex-col justify-center items-center bg-bg dark:bg-dark-bg border border-border dark:border-dark-border rounded-2xl shadow-md gap-4`}>
-    {#if title}
-      <div class='text-xl font-bold border-b border-text dark:border-dark-text self-start'>{title}</div>
-    {/if}
-    <div class='w-full flex flex-col'>
-      <slot/>
-    </div>
-  </div>
+<div {id} class="p-8">
+	<div
+		class={`${inner ? 'w-full' : 'w-1/2'} bg-bg dark:bg-dark-bg border-border dark:border-dark-border mx-auto my-2 flex flex-col items-center justify-center gap-4 rounded-2xl border p-4 shadow-md`}
+	>
+		{#if title}
+			<div class="border-text dark:border-dark-text self-start border-b text-xl font-bold">
+				{title}
+			</div>
+		{/if}
+		<div class="flex w-full flex-col">
+			<slot />
+		</div>
+	</div>
 </div>
