@@ -1,12 +1,17 @@
 <script lang="ts">
 	import Button from './Button.svelte';
 
-	const sections: string[] = ['stacks', 'projects', 'contact'];
+	const sections: string[] = ['stacks', 'projects', 'contact', 'resume'];
 
 	let isDark = false;
 
-	const scrollToSection = (id: string): void =>
-		document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+	const scrollToSection = (id: string): void => {
+		if (id === 'resume') {
+			window.open('/CV_Web.pdf', '_blank');
+		} else {
+			document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+		}
+	};
 	const toggleDarkMode = () => {
 		document.documentElement.classList.toggle('dark');
 		isDark = document.documentElement.classList.contains('dark');
