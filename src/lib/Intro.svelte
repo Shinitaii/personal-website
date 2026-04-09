@@ -1,28 +1,44 @@
 <script lang="ts">
-	import Button from './Button.svelte';
+	import Icon from '@iconify/svelte';
+	import { contacts } from '$lib/socials';
 </script>
 
-<div class="grid h-screen grid-cols-2">
-	<div class="flex flex-col items-center justify-center">
-		<div class="flex h-3/5 w-1/2 items-end justify-center">
-			<img src="/pic.jpg" alt="Richmond" class="rounded-full p-3" />
+
+<div class="grid min-h-screen grid-cols-1 gap-10 py-6 lg:grid-cols-2 lg:gap-8">
+	<div class="flex flex-col items-center justify-center gap-6 text-center lg:items-center lg:text-left">
+		<div class="flex w-full max-w-sm justify-center lg:max-w-none lg:justify-center xl:w-4/5">
+			<img src="/pic.jpg" alt="Richmond" class="w-full max-w-xs rounded-full p-3 sm:max-w-sm" />
 		</div>
-		<div class="flex h-2/5 w-1/2 flex-col items-start justify-start">
-			<p>Hello! <span class="italic">My name is...</span></p>
-			<p class="mb-2 text-6xl font-bold">Richmond Viloria</p>
-			<p>I'm an aspiring software engineer</p>
+		<div class="flex w-full max-w-xl flex-col items-center justify-start gap-1 lg:items-start">
+			<p class="text-sm sm:text-base">Hello! <span class="italic">My name is...</span></p>
+			<p class="text-4xl font-bold sm:text-5xl lg:text-6xl">Richmond Viloria</p>
+			<p class="text-sm sm:text-base">And I am a software developer.</p>
 		</div>
 	</div>
-	<div class="flex flex-col items-center justify-start">
-		<div class="flex h-3/5 w-full flex-col items-start justify-end">
-			<p>An undergraduate student in</p>
-			<p class="text-5xl font-bold">Computer Science</p>
-			<p class="italic">Major in Application Development</p>
-			<p class="mt-4 italic">Creating, planning and designing systems in:</p>
-			<div class="ml-8 flex flex-col gap-1">
-				<p class="text-2xl">{'>'} <span class="font-bold">Game Development</span></p>
-				<p class="text-2xl">{'>'} <span class="font-bold">Mobile Development</span></p>
-				<p class="text-2xl">{'>'} <span class="font-bold">Website Development</span></p>
+	<div class="flex flex-col items-center justify-center lg:items-start">
+		<div class="flex w-full max-w-2xl flex-col items-center justify-end lg:items-start">
+			<div class="mb-5 flex flex-wrap justify-center gap-3 lg:justify-start">
+				{#each contacts as contact}
+					<a
+						href={contact.url}
+						target={contact.name === 'Email' ? undefined : '_blank'}
+						rel={contact.name === 'Email' ? undefined : 'noopener'}
+						class="bg-primary/15 text-text border-border/70 dark:border-dark-border dark:bg-dark-secondary/20 dark:text-dark-text inline-flex items-center gap-2 rounded-full border px-3 py-2 text-sm font-medium transition hover:scale-105"
+						title={contact.name}
+					>
+						<Icon icon={contact.icon} width="18" />
+						<span>{contact.name}</span>
+					</a>
+				{/each}
+			</div>
+			<p class="text-sm sm:text-base">An undergraduate student in</p>
+			<p class="text-3xl font-bold sm:text-4xl lg:text-5xl">Computer Science</p>
+			<p class="text-sm italic sm:text-base">Major in Application Development</p>
+			<p class="mt-4 text-sm italic sm:text-base">Creating, planning and designing systems in:</p>
+			<div class="mt-2 flex flex-col gap-1">
+				<p class="text-lg sm:text-xl lg:text-2xl">{'>'} <span class="font-bold">Game Development</span></p>
+				<p class="text-lg sm:text-xl lg:text-2xl">{'>'} <span class="font-bold">Mobile Development</span></p>
+				<p class="text-lg sm:text-xl lg:text-2xl">{'>'} <span class="font-bold">Website Development</span></p>
 			</div>
 		</div>
 	</div>

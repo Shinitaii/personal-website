@@ -18,7 +18,7 @@
 	<button
 		type="button"
 		on:click={backToTop}
-		class="text-md bg-bg dark:bg-dark-bg text-text dark:text-dark-text hover:text-primary dark:hover:text-dark-primary border-border dark:border-dark-border fixed right-0 bottom-0 m-4 rounded-2xl border p-3 shadow-md transition duration-300 hover:cursor-pointer active:scale-95 active:duration-200"
+		class="bg-bg text-text border-border dark:bg-dark-bg dark:text-dark-text dark:border-dark-border fixed right-3 bottom-3 rounded-2xl border px-3 py-2 text-xs shadow-md transition duration-300 hover:cursor-pointer hover:text-primary dark:hover:text-dark-primary active:scale-95 active:duration-200 sm:right-4 sm:bottom-4 sm:text-sm"
 	>
 		BACK TO TOP
 	</button>

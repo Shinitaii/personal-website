@@ -1,187 +1,131 @@
 <script lang="ts">
 	import Section from '$lib/Section.svelte';
+
 	type Project = {
 		title: string;
-		image: string;
-		techStack: string[];
-		platform: string;
 		period: string;
 		role: string;
-		desc: string;
-		reason: string;
+		platform: string;
+		tags: string[];
+		description: string;
+		bullets: string[];
+		sortYear: number;
+		sortRank: number;
 	};
 
 	const projects: Project[] = [
 		{
-			title: 'OAS',
-			image: '',
-			techStack: ['Java', 'SQL Developer'],
-			platform: 'Native PC',
-			period: '2022',
+			title: 'Moldify',
+			period: '2025 - Present',
 			role: 'Lead Developer',
-			desc: 'A native attendance system for schools, allowing admins, teachers, and students to manage and track attendance efficiently with a user-friendly interface.',
-			reason:
-				'Capstone project for 2022, aimed at solving real-world attendance tracking issues in educational institutions.'
+			platform: 'Mobile + Website + API',
+			tags: ['PyTorch', 'AWS', 'Firebase', 'Node.js', 'Express', 'TypeScript', 'Flutter'],
+			description: 'An AI-powered mobile platform that helps farmers detect and monitor mold growth through image analysis and metadata.',
+			bullets: [
+				'Implemented and integrated REST API endpoints for website and mobile clients.',
+				'Connected AWS and Firebase services to support backend storage and deployment needs.',
+				'Developed a multimodal CNN-ANN model that identified 5 mold genera with 89% preliminary accuracy on 571 image and metadata samples.'
+			],
+			sortYear: 2025,
+			sortRank: 4
 		},
 		{
-			title: 'GymRAWR',
-			image: '',
-			techStack: ['Java', 'MySQL'],
-			platform: 'Native PC',
-			period: '2023',
+			title: 'Deck Website & API',
+			period: '2025',
 			role: 'Lead Developer',
-			desc: 'A comprehensive gym management system for handling memberships, trainers, attendance, and equipment inventory, streamlining daily operations.',
-			reason:
-				'Developed as a major subject requirement in 2023 to address the needs of local gyms for digital management tools.'
-		},
-		{
-			title: 'Wear Your Mood',
-			image: '',
-			techStack: ['PHP', 'MySQL'],
-			platform: 'Website',
-			period: '2023',
-			role: 'Backend Developer',
-			desc: 'An e-commerce platform for selling customizable clothing, featuring user accounts, product management, and secure checkout.',
-			reason:
-				'Created for a 2024 subject requirement, focusing on building a scalable and secure online store.'
-		},
-		{
-			title: 'Archivary',
-			image: '',
-			techStack: ['C#', 'MySQL'],
-			platform: 'Native PC',
-			period: '2023',
-			role: 'Lead Developer',
-			desc: 'A digital library management system to track borrowed books, manage inventory, and generate reports for librarians and users.',
-			reason:
-				'Final project for a 2023 subject, designed to modernize library workflows and improve accessibility.'
-		},
-		{
-			title: 'Utilitool',
-			image: '',
-			techStack: ['Next.js', 'React', 'Firebase', 'Express', 'TypeScript'],
-			platform: 'Website',
-			period: '2023',
-			role: 'Lead Developer',
-			desc: 'A web-based utility calculator for landlords, automating the calculation and tracking of tenant utility costs with a clean dashboard.',
-			reason:
-				'Commissioned by a landlord client as a freelance project to simplify property management.'
-		},
-		{
-			title: 'Deck Mobile',
-			image: '',
-			techStack: ['Flutter', 'Dart', 'Firebase'],
-			platform: 'Mobile',
-			period: '2023',
-			role: 'Backend Developer',
-			desc: 'A mobile flashcard app with AI-powered card generation, helping students boost productivity and retention through smart study tools.',
-			reason:
-				'Built for a 2023 subject, inspired by the need for effective, on-the-go study aids for students.'
-		},
-		{
-			title: 'Ventify',
-			image: '',
-			techStack: ['Next.js', 'React', 'MongoDB'],
-			platform: 'Website',
-			period: '2024',
-			role: 'Lead Developer',
-			desc: 'A web-based anonymous social media that posts anything you want to rant about.',
-			reason: 'A self-project in learning about the ecosystem in terms of website backend'
+			platform: 'Website + API',
+			tags: ['CodeIgniter', 'Firebase', 'PHP', 'TypeScript', 'Express'],
+			description: 'The admin web portal and API for the Deck ecosystem, used to manage users, content, and analytics.',
+			bullets: [
+				'Implemented and integrated REST API endpoints from frontend to backend using CodeIgniter.',
+				'Extended the platform with an admin dashboard for moderation and user management.'
+			],
+			sortYear: 2025,
+			sortRank: 3
 		},
 		{
 			title: 'Through The Woods',
-			image: '',
-			techStack: ['Unity', 'C#'],
-			platform: 'Mobile',
 			period: '2024',
 			role: 'Lead Developer',
-			desc: 'A 2D adventure-puzzle mobile game about siblings navigating a magical forest, inspired by Hansel and Gretel, featuring hand-drawn art and original puzzles.',
-			reason:
-				'Developed as a 2024 subject requirement, combining storytelling and game design skills.'
+			platform: 'Game',
+			tags: ['Unity', 'C#', 'Game Systems'],
+			description: 'A 2D adventure-puzzle game about siblings navigating a magical forest, inspired by Hansel and Gretel.',
+			bullets: [
+				'Implemented five core game systems: audio, main menu navigation, save/load, and cutscene/dialogue flow.',
+				'Developed level progression and item collection mechanics with state management.'
+			],
+			sortYear: 2024,
+			sortRank: 2
 		},
 		{
-			title: 'Deck Website + API',
-			image: '',
-			techStack: [
-				'CodeIgniter',
-				'HTML',
-				'CSS',
-				'JavaScript',
-				'PHP',
-				'Express',
-				'TypeScript',
-				'Firebase'
+			title: 'Deck Mobile',
+			period: '2023',
+			role: 'Full-stack Developer',
+			platform: 'Mobile',
+			tags: ['Flutter', 'Dart', 'Firebase'],
+			description: 'A mobile app for the Deck ecosystem that connects the frontend to backend services for student study workflows.',
+			bullets: [
+				'Implemented and integrated REST API endpoints connecting the mobile frontend to backend services using Flutter.',
+				'Improved student study performance by 30% based on testing.'
 			],
-			platform: 'Website + API',
-			period: '2025',
-			role: 'Fullstack Developer',
-			desc: 'The admin web portal and API for the Deck app, enabling administrators to manage users, content, and analytics with robust backend services.',
-			reason:
-				'Final project for a 2025 subject, expanding the Deck ecosystem for better admin control and scalability.'
+			sortYear: 2023,
+			sortRank: 1
+		},
+		{
+			title: 'Utilitool',
+			period: '2023 - Ongoing',
+			role: 'Full-stack Developer',
+			platform: 'Website',
+			tags: ['Automation', 'Web', 'Firebase', 'Next.js'],
+			description: 'A tenant record tracking and utility bill calculation system built to reduce landlord management overhead.',
+			bullets: [
+				'Designed and implemented REST API endpoints using Next.js, Express, and Firebase.',
+				'Integrated an automated calculation engine that reduced manual process time by 70%.'
+			],
+			sortYear: 2023,
+			sortRank: 0
 		}
-		// Add more projects as needed
-	];
+	].sort((left, right) => {
+		if (left.sortYear !== right.sortYear) {
+			return right.sortYear - left.sortYear;
+		}
 
-	let current = 0;
-
-	const goTo = (idx: number) => {
-		current = idx;
-	};
+		return right.sortRank - left.sortRank;
+	});
 </script>
 
 <Section id="projects" title="Projects">
-	<div class="relative flex w-full flex-col items-center">
-		<!-- Carousel Slides -->
-		<div
-			class="mb-4 flex h-64 w-full items-center justify-center overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800"
-		>
-			{#each projects as project, idx}
-				{#if project.image && project.image !== ''}
-					<img
-						src={project.image}
-						alt={project.title}
-						class="h-full w-full object-contain transition-all duration-500"
-						style="display: {current === idx ? 'block' : 'none'}"
-					/>
-				{:else}
-					<div
-						class="flex h-full w-full items-center justify-center bg-gray-200 text-4xl font-bold text-gray-400 dark:bg-gray-700 dark:text-gray-500"
-						style="display: {current === idx ? 'flex' : 'none'}"
-					>
-						No Image
+	<div class="grid w-full gap-4">
+		{#each projects as project}
+			<article class="bg-bg/90 dark:bg-lighter-dark-bg/80 border-border/70 dark:border-dark-border rounded-2xl border p-4 shadow-[0_16px_40px_rgba(86,105,137,0.1)] dark:shadow-[0_24px_65px_rgba(0,0,0,0.38)] sm:p-5">
+				<div class="mb-4 flex flex-col gap-2">
+					<div class="flex flex-wrap items-center gap-3">
+						<h2 class="text-xl font-bold sm:text-2xl">{project.title}</h2>
+						<span class="bg-primary/20 dark:bg-dark-secondary/20 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide sm:text-xs">
+							{project.period}
+						</span>
 					</div>
-				{/if}
-			{/each}
-		</div>
-		<!-- Dot Navigation -->
-		<div class="mb-6 flex gap-2">
-			{#each projects as _, idx}
-				<button
-					class="h-3 w-3 rounded-full bg-gray-400 transition dark:bg-gray-600"
-					class:dark:bg-lighter-dark-bg={current === idx}
-					class:bg-primary={current === idx}
-					on:click={() => goTo(idx)}
-					aria-label={`Go to project ${idx + 1}`}
-				></button>
-			{/each}
-		</div>
-		<!-- Project Details -->
-		<div
-			class="bg-bg dark:bg-dark-bg border-border dark:border-dark-border mx-auto w-full max-w-2xl rounded-lg border p-4 shadow"
-		>
-			<h2 class="mb-2 text-2xl font-bold">{projects[current].title}</h2>
-			<div class="mb-2 flex flex-wrap gap-2">
-				{#each projects[current].techStack as tech}
-					<span class="bg-primary/20 rounded px-2 py-1 text-sm">{tech}</span>
-				{/each}
-			</div>
-			<div class="mb-2 text-sm text-gray-600 dark:text-gray-300">
-				<span class="mr-4"><b>Platform:</b> {projects[current].platform}</span>
-				<span class="mr-4"><b>Period:</b> {projects[current].period}</span>
-				<span><b>Role:</b> {projects[current].role}</span>
-			</div>
-			<div class="mb-2"><b>Description:</b> {projects[current].desc}</div>
-			<div><b>Why:</b> {projects[current].reason}</div>
-		</div>
+					<div class="text-sm text-gray-600 dark:text-gray-300">
+						<span class="mr-4"><b>Role:</b> {project.role}</span>
+						<span class="mr-4"><b>Platform:</b> {project.platform}</span>
+					</div>
+				</div>
+
+				<div class="mb-4 flex flex-wrap gap-2">
+					{#each project.tags as tag}
+						<span class="bg-tertiary/20 dark:bg-dark-accent/20 rounded-full px-3 py-1 text-xs sm:text-sm">
+							{tag}
+						</span>
+					{/each}
+				</div>
+
+				<p class="mb-3 text-sm leading-relaxed sm:text-base">{project.description}</p>
+				<ul class="ml-5 list-disc space-y-2">
+					{#each project.bullets as bullet}
+						<li class="text-sm sm:text-base">{bullet}</li>
+					{/each}
+				</ul>
+			</article>
+		{/each}
 	</div>
 </Section>

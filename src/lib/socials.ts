@@ -10,3 +10,12 @@ export const socials = [
 		url: 'https://linkedin.com/in/richmond-glenn-viloria'
 	}
 ];
+
+export const contacts = [
+	...socials,
+	{
+		name: 'Email',
+		icon: 'mdi:email-outline',
+		url: 'mailto:rg.viloria@proton.me'
+	}
+];

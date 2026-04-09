@@ -1,129 +1,141 @@
 <script lang="ts">
-	import Dropdown from '$lib/components/Dropdown.svelte';
-	import DropdownItem from '$lib/components/DropdownItem.svelte';
 	import Section from '$lib/Section.svelte';
 	import Icon from '@iconify/svelte';
+	import type { TechStack } from '../../types/tech-types.d.ts';
+
+	const stacks: TechStack[] = getDefaultStacks();
+
+	function getDefaultStacks(): TechStack[] {
+		return [
+			{
+				id: 'languages',
+				category: 'Languages',
+				items: [
+					{ label: 'TypeScript', icon: 'logos:typescript-icon' },
+					{ label: 'JavaScript', icon: 'logos:javascript' },
+					{ label: 'Java', icon: 'logos:java' },
+					{ label: 'Python', icon: 'logos:python' },
+					{ label: 'C#', icon: 'logos:c-sharp' },
+					{ label: 'Dart', icon: 'logos:dart' },
+					{ label: 'HTML', icon: 'logos:html-5' },
+					{ label: 'CSS', icon: 'logos:css-3' },
+					{ label: 'PHP', icon: 'logos:php' }
+				]
+			},
+			{
+				id: 'os',
+				category: 'Operating Systems',
+				items: [
+					{ label: 'Windows', icon: 'mdi:microsoft-windows' },
+					{ label: 'Linux', icon: 'mdi:linux' }
+				]
+			},
+			{
+				id: 'frontend',
+				category: 'Frontend',
+				items: [
+					{ label: 'Svelte', icon: 'logos:svelte-icon' },
+					{ label: 'Next.js', icon: 'logos:nextjs-icon' },
+					{ label: 'React', icon: 'logos:react' },
+					{ label: 'Flutter', icon: 'logos:flutter' },
+					{ label: 'Tailwind CSS', icon: 'logos:tailwindcss-icon' }
+				]
+			},
+			{
+				id: 'backend',
+				category: 'Backend',
+				items: [
+					{ label: 'Node.js', icon: 'logos:nodejs-icon' },
+					{ label: 'Express', icon: 'logos:express' },
+					{ label: 'Flask', icon: 'logos:flask' },
+					{ label: 'Spring Boot', icon: 'logos:spring-icon' },
+					{ label: 'Laravel', icon: 'logos:laravel' }
+				]
+			},
+			{
+				id: 'databases',
+				category: 'Databases',
+				items: [
+					{ label: 'MySQL', icon: 'logos:mysql' },
+					{ label: 'PostgreSQL', icon: 'logos:postgresql' },
+					{ label: 'Firebase', icon: 'logos:firebase' },
+					{ label: 'MongoDB', icon: 'logos:mongodb-icon' },
+					{ label: 'Redis', icon: 'logos:redis' }
+				]
+			},
+			{
+				id: 'cloud',
+				category: 'Cloud Computing',
+				items: [
+					{ label: 'AWS', icon: 'logos:aws' },
+					{ label: 'GCP', icon: 'logos:gcp' }
+				]
+			},
+			{
+				id: 'devops',
+				category: 'DevOps',
+				items: [
+					{ label: 'Docker', icon: 'logos:docker-icon' },
+					{ label: 'GitHub Actions', icon: 'logos:github-actions-icon' }
+				]
+			},
+			{
+				id: 'ml',
+				category: 'Machine Learning',
+				items: [
+					{ label: 'PyTorch', icon: 'logos:pytorch' },
+					{ label: 'TensorFlow', icon: 'logos:tensorflow' }
+				]
+			},
+			{
+				id: 'testing',
+				category: 'Testing',
+				items: [
+					{ label: 'Jest', icon: 'logos:jest' },
+					{ label: 'Postman', icon: 'logos:postman' }
+				]
+			},
+			{
+				id: 'gameengines',
+				category: 'Game Engines',
+				items: [
+					{ label: 'Unity', icon: 'logos:unity' },
+					{ label: 'Godot', icon: 'logos:godot-icon' }
+				]
+			},
+			{
+				id: 'versioncontrol',
+				category: 'Version Control',
+				items: [
+					{ label: 'Git', icon: 'logos:git-icon' },
+					{ label: 'GitHub', icon: 'logos:github-icon' },
+					{ label: 'GitLab', icon: 'logos:gitlab' }
+				]
+			}
+		];
+	}
 </script>
 
-<Section id="stacks" title="Tech Stacks">
-	<Dropdown title="Languages">
-		<DropdownItem label="TypeScript">
-			<Icon icon="logos:typescript-icon" width="28" />
-		</DropdownItem>
-		<DropdownItem label="JavaScript">
-			<Icon icon="logos:javascript" width="28" />
-		</DropdownItem>
-		<DropdownItem label="Java">
-			<Icon icon="logos:java" width="28" />
-		</DropdownItem>
-		<DropdownItem label="Python">
-			<Icon icon="logos:python" width="28" />
-		</DropdownItem>
-		<DropdownItem label="C#">
-			<Icon icon="logos:c-sharp" width="28" />
-		</DropdownItem>
-		<DropdownItem label="Dart">
-			<Icon icon="logos:dart" width="28" />
-		</DropdownItem>
-		<DropdownItem label="Kotlin">
-			<Icon icon="logos:kotlin-icon" width="28" />
-		</DropdownItem>
-		<DropdownItem label="HTML">
-			<Icon icon="logos:html-5" width="28" />
-		</DropdownItem>
-		<DropdownItem label="CSS">
-			<Icon icon="logos:css-3" width="28" />
-		</DropdownItem>
-		<DropdownItem label="PHP">
-			<Icon icon="logos:php" width="28" />
-		</DropdownItem>
-	</Dropdown>
-	<Dropdown title="Databases">
-		<DropdownItem label="MySQL">
-			<Icon icon="logos:mysql" width="28" />
-		</DropdownItem>
-		<DropdownItem label="SQL Developer">
-			<Icon icon="mdi:database" width="28" />
-		</DropdownItem>
-		<DropdownItem label="PostgreSQL">
-			<Icon icon="logos:postgresql" width="28" />
-		</DropdownItem>
-		<DropdownItem label="Firebase">
-			<Icon icon="logos:firebase" width="28" />
-		</DropdownItem>
-		<DropdownItem label="Supabase">
-			<Icon icon="logos:supabase-icon" width="28" />
-		</DropdownItem>
-	</Dropdown>
-	<Dropdown title="Website Frameworks">
-		<DropdownItem label="Svelte">
-			<Icon icon="logos:svelte-icon" width="28" />
-		</DropdownItem>
-		<DropdownItem label="Next.js">
-			<Icon icon="logos:nextjs-icon" width="28" />
-		</DropdownItem>
-		<DropdownItem label="React">
-			<Icon icon="logos:react" width="28" />
-		</DropdownItem>
-		<DropdownItem label="Express">
-			<Icon icon="logos:express" width="28" />
-		</DropdownItem>
-		<DropdownItem label="CodeIgniter">
-			<Icon icon="logos:codeigniter-icon" width="28" />
-		</DropdownItem>
-		<DropdownItem label="Spring Boot">
-			<Icon icon="logos:spring-icon" width="28" />
-		</DropdownItem>
-	</Dropdown>
-	<Dropdown title="Mobile Frameworks">
-		<DropdownItem label="Flutter">
-			<Icon icon="logos:flutter" width="28" />
-		</DropdownItem>
-	</Dropdown>
-	<Dropdown title="Game Engines">
-		<DropdownItem label="Unity">
-			<Icon icon="logos:unity" width="28" />
-		</DropdownItem>
-		<DropdownItem label="Godot">
-			<Icon icon="logos:godot-icon" width="28" />
-		</DropdownItem>
-	</Dropdown>
-	<Dropdown title="Software Tools">
-		<DropdownItem label="Docker">
-			<Icon icon="logos:docker-icon" width="28" />
-		</DropdownItem>
-		<DropdownItem label="Node.js">
-			<Icon icon="logos:nodejs-icon" width="28" />
-		</DropdownItem>
-		<DropdownItem label="Composer">
-			<Icon icon="logos:composer" width="28" />
-		</DropdownItem>
-		<DropdownItem label="npm">
-			<Icon icon="logos:npm-icon" width="28" />
-		</DropdownItem>
-		<DropdownItem label="Postman">
-			<Icon icon="logos:postman-icon" width="28" />
-		</DropdownItem>
-		<DropdownItem label="Maven">
-			<Icon icon="simple-icons:apachemaven" width="28" />
-		</DropdownItem>
-		<DropdownItem label="Git">
-			<Icon icon="logos:git-icon" width="28" />
-		</DropdownItem>
-		<DropdownItem label="Github">
-			<Icon icon="logos:github-icon" width="28" />
-		</DropdownItem>
-		<DropdownItem label="VS Code">
-			<Icon icon="logos:visual-studio-code" width="28" />
-		</DropdownItem>
-		<DropdownItem label="Visual Studio">
-			<Icon icon="logos:visual-studio" width="28" />
-		</DropdownItem>
-		<DropdownItem label="IntelliJ">
-			<Icon icon="logos:intellij-idea" width="28" />
-		</DropdownItem>
-		<DropdownItem label="Android Studio">
-			<Icon icon="devicon:androidstudio" width="28" />
-		</DropdownItem>
-	</Dropdown>
+<Section id="skills" title="Skills">
+	<div class="grid w-full gap-4 sm:grid-cols-2 xl:grid-cols-3">
+		{#each stacks as stack (stack.category)}
+			<article class="bg-bg/80 dark:bg-lighter-dark-bg/80 border-border/70 dark:border-dark-border rounded-2xl border p-4 shadow-sm transition-transform duration-300 hover:-translate-y-0.5">
+				<div class="mb-3 flex items-center justify-between gap-3">
+					<h3 class="text-base font-semibold sm:text-lg">{stack.category}</h3>
+					<span class="bg-tertiary/20 dark:bg-dark-accent/20 text-text dark:text-dark-text rounded-full px-2 py-1 text-[10px] font-medium uppercase tracking-[0.2em]">
+						{stack.items.length}
+					</span>
+				</div>
+
+				<div class="flex flex-wrap gap-2">
+					{#each stack.items as item (item.label)}
+						<div class="bg-primary/10 dark:bg-dark-secondary/20 border-border/60 dark:border-dark-border flex items-center gap-2 rounded-full border px-3 py-2 text-sm">
+							<Icon icon={item.icon} width="18" />
+							<span>{item.label}</span>
+						</div>
+					{/each}
+				</div>
+			</article>
+		{/each}
+	</div>
 </Section>

@@ -1,9 +1,10 @@
 <script>
 	import Header from '$lib/Header.svelte';
 	import Intro from '$lib/Intro.svelte';
-	import StackSection from '$lib/sections/StackSection.svelte';
+	import WorkSection from '$lib/sections/WorkSection.svelte';
 	import ProjectSection from '$lib/sections/ProjectSection.svelte';
-	import ContactSection from '$lib/sections/ContactSection.svelte';
+	import CertificateSection from '$lib/sections/CertificateSection.svelte';
+	import StackSection from '$lib/sections/StackSection.svelte';
 	import UpButton from '$lib/UpButton.svelte';
 	import Footer from '$lib/Footer.svelte';
 </script>
@@ -11,8 +12,8 @@
 <UpButton />
 <Header />
 <Intro />
-<StackSection />
+<WorkSection />
 <ProjectSection />
-<ContactSection />
+<CertificateSection />
+<StackSection />
 <Footer />
-<!-- ...existing code... -->

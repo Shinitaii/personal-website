@@ -3,21 +3,23 @@
 @plugin '@tailwindcss/typography';
 @custom-variant dark (&:where(.dark, .dark *));
 @theme {
-	--color-primary: rgb(171, 196, 255);
-	--color-secondary: rgb(193, 211, 254);
-	--color-tertiary: rgb(204, 219, 253);
-	--color-bg: rgb(237, 242, 250);
-	--color-lighter-bg: rgb(245, 247, 250);
-	--color-border: rgb(215, 227, 252);
-	--color-text: rgb(30, 41, 59);
+	--color-primary: rgb(114, 144, 196);
+	--color-secondary: rgb(148, 170, 210);
+	--color-tertiary: rgb(198, 180, 144);
+	--color-accent: rgb(176, 145, 103);
+	--color-bg: rgb(238, 243, 250);
+	--color-lighter-bg: rgb(247, 249, 253);
+	--color-border: rgb(201, 214, 231);
+	--color-text: rgb(40, 54, 73);
 
-	--color-dark-primary: rgb(99, 102, 241);
-	--color-dark-secondary: rgb(59, 130, 246);
-	--color-dark-tertiary: rgb(30, 64, 175);
-	--color-dark-bg: rgb(12, 18, 30);
-	--color-lighter-dark-bg: rgb(17, 24, 39);
-	--color-dark-border: rgb(55, 65, 81);
-	--color-dark-text: rgb(229, 231, 235);
+	--color-dark-primary: rgb(91, 122, 170);
+	--color-dark-secondary: rgb(73, 100, 145);
+	--color-dark-tertiary: rgb(183, 165, 123);
+	--color-dark-accent: rgb(211, 178, 120);
+	--color-dark-bg: rgb(14, 21, 33);
+	--color-lighter-dark-bg: rgb(20, 29, 44);
+	--color-dark-border: rgb(54, 68, 90);
+	--color-dark-text: rgb(216, 224, 236);
 }
 
 :root {
@@ -36,8 +38,10 @@
 		'Droid Sans',
 		'Helvetica Neue',
 		sans-serif;
-	color: rgb(30, 41, 59);
-	background-color: rgb(245, 247, 250);
+	color: rgb(40, 54, 73);
+	background-color: rgb(247, 249, 253);
+	background-image: radial-gradient(circle at top left, rgba(114, 144, 196, 0.14), transparent 28%),
+		radial-gradient(circle at bottom right, rgba(198, 180, 144, 0.12), transparent 30%);
 }
 
 html,
@@ -46,6 +50,11 @@ body {
 }
 
 .dark {
-	color: rgb(229, 231, 235);
-	background-color: rgb(17, 24, 39);
+	color: rgb(216, 224, 236);
+	background-color: rgb(20, 29, 44);
+}
+
+.dark body {
+	background-image: radial-gradient(circle at top, rgba(91, 122, 170, 0.16), transparent 42%),
+		radial-gradient(circle at bottom right, rgba(211, 178, 120, 0.1), transparent 34%);
 }
