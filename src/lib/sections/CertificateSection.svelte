@@ -24,7 +24,7 @@
 			],
 			description:
 				'Earner demonstrates foundational knowledge of how to design and query relational databases such as MySQL, Microsoft SQL Server, or Oracle.',
-			proofUrl: 'https://www.credly.com/earner/earned/badge/e4ed66d1-86ac-4bfe-a85d-5826ba121da9'
+			proofUrl: 'https://www.credly.com/badges/e4ed66d1-86ac-4bfe-a85d-5826ba121da9/public_url'
 		}
 	];
 </script>
