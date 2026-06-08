@@ -38,6 +38,7 @@
 					{ label: 'Next.js', icon: 'logos:nextjs-icon' },
 					{ label: 'React', icon: 'logos:react' },
 					{ label: 'Flutter', icon: 'logos:flutter' },
+					{ label: 'Capacitor', icon: 'logos:capacitorjs-icon' },
 					{ label: 'Tailwind CSS', icon: 'logos:tailwindcss-icon' }
 				]
 			},

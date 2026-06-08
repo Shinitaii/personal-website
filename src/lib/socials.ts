@@ -8,6 +8,11 @@ export const socials = [
 		name: 'LinkedIn',
 		icon: 'mdi:linkedin',
 		url: 'https://linkedin.com/in/richmond-glenn-viloria'
+	},
+	{
+		name: 'Upwork',
+		icon: 'simple-icons:upwork',
+		url: 'https://www.upwork.com/freelancers/~01e04a66514521e24d'
 	}
 ];
 

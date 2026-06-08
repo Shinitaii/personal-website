@@ -4,7 +4,7 @@
 </script>
 
 
-<div class="grid min-h-screen grid-cols-1 gap-10 py-6 lg:grid-cols-2 lg:gap-8">
+<div id="intro" class="grid min-h-screen grid-cols-1 gap-10 py-6 lg:grid-cols-2 lg:gap-8">
 	<div class="flex flex-col items-center justify-center gap-6 text-center lg:items-center lg:text-left">
 		<div class="flex w-full max-w-sm justify-center lg:max-w-none lg:justify-center xl:w-4/5">
 			<img src="/pic.jpg" alt="Richmond" class="w-full max-w-xs rounded-full p-3 sm:max-w-sm" />
@@ -31,14 +31,14 @@
 					</a>
 				{/each}
 			</div>
-			<p class="text-sm sm:text-base">An undergraduate student in</p>
+			<p class="text-sm sm:text-base">A graduating student of</p>
 			<p class="text-3xl font-bold sm:text-4xl lg:text-5xl">Computer Science</p>
-			<p class="text-sm italic sm:text-base">Major in Application Development</p>
+			<p class="text-sm italic sm:text-base">Application Development Elective Track</p>
 			<p class="mt-4 text-sm italic sm:text-base">Creating, planning and designing systems in:</p>
 			<div class="mt-2 flex flex-col gap-1">
-				<p class="text-lg sm:text-xl lg:text-2xl">{'>'} <span class="font-bold">Game Development</span></p>
-				<p class="text-lg sm:text-xl lg:text-2xl">{'>'} <span class="font-bold">Mobile Development</span></p>
 				<p class="text-lg sm:text-xl lg:text-2xl">{'>'} <span class="font-bold">Website Development</span></p>
+				<p class="text-lg sm:text-xl lg:text-2xl">{'>'} <span class="font-bold">Mobile Development</span></p>
+				<p class="text-lg sm:text-xl lg:text-2xl">{'>'} <span class="font-bold">Game Development</span></p>
 			</div>
 		</div>
 	</div>
