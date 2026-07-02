@@ -110,15 +110,9 @@
 	<meta name="twitter:image" content="https://rgviloria.vercel.app/pic.jpg" />
 	<link rel="canonical" href="https://rgviloria.vercel.app" />
 	<meta property="og:url" content="https://rgviloria.vercel.app" />
-	<script type="application/ld+json">
-		{@html JSON.stringify(personSchema)}
-	</script>
-	<script type="application/ld+json">
-		{@html JSON.stringify(websiteSchema)}
-	</script>
-	<script type="application/ld+json">
-		{@html JSON.stringify(faqSchema)}
-	</script>
+	{@html `<script type="application/ld+json">${JSON.stringify(personSchema)}</` + `script>`}
+	{@html `<script type="application/ld+json">${JSON.stringify(websiteSchema)}</` + `script>`}
+	{@html `<script type="application/ld+json">${JSON.stringify(faqSchema)}</` + `script>`}
 </svelte:head>
 
 <UpButton />
