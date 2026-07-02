@@ -1,0 +1,30 @@
+# Richmond Glenn Viloria
+
+Personal portfolio of Richmond Glenn Viloria, an aspiring software engineer focused on website, mobile, and game development.
+
+## Summary
+
+- Fullstack web and mobile development
+- Workflow automation and internal tools
+- Frontend, backend, and deployment work
+
+## Key Pages
+
+- Home: https://rgviloria.vercel.app/
+
+## Skills
+
+- SvelteKit, Svelte, TypeScript, Vite
+- Node.js, Express, Firebase, Flutter, React
+- AWS, GitHub Actions, PostgreSQL, MySQL
+
+## Experience Themes
+
+- HRIS and workflow systems
+- Multi-platform product builds
+- Automation for manual business processes
+
+## Contact
+
+- GitHub: https://github.com/Shinitaii
+- LinkedIn: https://ph.linkedin.com/in/rgviloria

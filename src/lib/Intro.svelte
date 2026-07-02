@@ -12,7 +12,7 @@
 		<div class="flex w-full max-w-xl flex-col items-center justify-start gap-1 lg:items-start">
 			<p class="text-sm sm:text-base">Hello! <span class="italic">My name is...</span></p>
 			<p class="text-4xl font-bold sm:text-5xl lg:text-6xl">Richmond Viloria</p>
-			<p class="text-sm sm:text-base">And I am a software engineer.</p>
+			<p class="text-sm sm:text-base">And I am an aspiring software engineer.</p>
 		</div>
 	</div>
 	<div class="flex flex-col items-center justify-center lg:items-start">
