@@ -7,7 +7,7 @@ export const socials = [
 	{
 		name: 'LinkedIn',
 		icon: 'mdi:linkedin',
-		url: 'https://linkedin.com/in/richmond-glenn-viloria'
+		url: 'https://linkedin.com/in/rgviloria'
 	},
 	{
 		name: 'Upwork',

@@ -15,7 +15,7 @@
 
 	const workEntries: WorkEntry[] = [
 		{
-			title: 'ORTADEL Technologies',
+			title: 'ORTADEL Technologies Corporation',
 			period: 'Feb 2026 - May 2026',
 			role: 'Software Developer Intern',
 			context: 'Internship',

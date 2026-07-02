@@ -12,7 +12,7 @@
 		<div class="flex w-full max-w-xl flex-col items-center justify-start gap-1 lg:items-start">
 			<p class="text-sm sm:text-base">Hello! <span class="italic">My name is...</span></p>
 			<p class="text-4xl font-bold sm:text-5xl lg:text-6xl">Richmond Viloria</p>
-			<p class="text-sm sm:text-base">And I am a software developer.</p>
+			<p class="text-sm sm:text-base">And I am a software engineer.</p>
 		</div>
 	</div>
 	<div class="flex flex-col items-center justify-center lg:items-start">
@@ -31,15 +31,15 @@
 					</a>
 				{/each}
 			</div>
-			<p class="text-sm sm:text-base">A graduating student of</p>
+			<p class="text-sm sm:text-base">A graduate  of</p>
 			<p class="text-3xl font-bold sm:text-4xl lg:text-5xl">Computer Science</p>
-			<p class="text-sm italic sm:text-base">Application Development Elective Track</p>
 			<p class="mt-4 text-sm italic sm:text-base">Creating, planning and designing systems in:</p>
 			<div class="mt-2 flex flex-col gap-1">
 				<p class="text-lg sm:text-xl lg:text-2xl">{'>'} <span class="font-bold">Website Development</span></p>
 				<p class="text-lg sm:text-xl lg:text-2xl">{'>'} <span class="font-bold">Mobile Development</span></p>
 				<p class="text-lg sm:text-xl lg:text-2xl">{'>'} <span class="font-bold">Game Development</span></p>
 			</div>
+						<p class="text-sm italic sm:text-base">Application Development Elective Track</p>
 		</div>
 	</div>
 </div>
