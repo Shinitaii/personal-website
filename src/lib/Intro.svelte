@@ -7,11 +7,15 @@
 <div id="intro" class="grid min-h-screen grid-cols-1 gap-10 py-6 lg:grid-cols-2 lg:gap-8">
 	<div class="flex flex-col items-center justify-center gap-6 text-center lg:items-center lg:text-left">
 		<div class="flex w-full max-w-sm justify-center lg:max-w-none lg:justify-center xl:w-4/5">
-			<img src="/pic.jpg" alt="Richmond" class="w-full max-w-xs rounded-full p-3 sm:max-w-sm" />
+			<img
+				src="/pic.jpg"
+				alt="Richmond Glenn Viloria, aspiring software engineer"
+				class="w-full max-w-xs rounded-full p-3 sm:max-w-sm"
+			/>
 		</div>
 		<div class="flex w-full max-w-xl flex-col items-center justify-start gap-1 lg:items-start">
 			<p class="text-sm sm:text-base">Hello! <span class="italic">My name is...</span></p>
-			<p class="text-4xl font-bold sm:text-5xl lg:text-6xl">Richmond Viloria</p>
+			<h1 class="text-4xl font-bold sm:text-5xl lg:text-6xl">Richmond Glenn Viloria</h1>
 			<p class="text-sm sm:text-base">And I am an aspiring software engineer.</p>
 		</div>
 	</div>

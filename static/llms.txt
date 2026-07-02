@@ -11,6 +11,12 @@ Personal portfolio of Richmond Glenn Viloria, an aspiring software engineer focu
 ## Key Pages
 
 - Home: https://rgviloria.vercel.app/
+- Work Experience: https://rgviloria.vercel.app/#work
+- Projects: https://rgviloria.vercel.app/#projects
+- In Action (Media): https://rgviloria.vercel.app/#media
+- Work With Me (Freelance): https://rgviloria.vercel.app/#freelance
+- Certificates: https://rgviloria.vercel.app/#certificates
+- Skills: https://rgviloria.vercel.app/#skills
 
 ## Skills
 

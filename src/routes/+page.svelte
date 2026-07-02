@@ -40,6 +40,49 @@
 			}
 		]
 	};
+
+	const personSchema = {
+		'@context': 'https://schema.org',
+		'@type': 'Person',
+		name: 'Richmond Glenn Viloria',
+		alternateName: 'Shinitaii',
+		jobTitle: 'Aspiring Software Engineer',
+		description:
+			'Aspiring software engineer focused on website, mobile, and game development, with experience across frontend, backend, and deployment.',
+		url: 'https://rgviloria.vercel.app',
+		image: 'https://rgviloria.vercel.app/pic.jpg',
+		sameAs: ['https://ph.linkedin.com/in/rgviloria', 'https://github.com/Shinitaii'],
+		alumniOf: {
+			'@type': 'CollegeOrUniversity',
+			name: 'University of Makati'
+		},
+		knowsAbout: [
+			'SvelteKit',
+			'Svelte',
+			'TypeScript',
+			'Vite',
+			'Node.js',
+			'Express',
+			'Firebase',
+			'Flutter',
+			'React',
+			'AWS',
+			'GitHub Actions',
+			'PostgreSQL',
+			'MySQL'
+		]
+	};
+
+	const websiteSchema = {
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		name: 'Richmond Glenn Viloria',
+		url: 'https://rgviloria.vercel.app',
+		author: {
+			'@type': 'Person',
+			name: 'Richmond Glenn Viloria'
+		}
+	};
 </script>
 
 <svelte:head>
@@ -56,6 +99,7 @@
 	/>
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="https://rgviloria.vercel.app/pic.jpg" />
+	<meta property="og:image:alt" content="Richmond Glenn Viloria, aspiring software engineer" />
 	<meta property="og:site_name" content="Richmond Glenn Viloria" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Richmond Glenn Viloria | Aspiring Software Engineer" />
@@ -67,26 +111,13 @@
 	<link rel="canonical" href="https://rgviloria.vercel.app" />
 	<meta property="og:url" content="https://rgviloria.vercel.app" />
 	<script type="application/ld+json">
-		{JSON.stringify({
-			"@context": "https://schema.org",
-			"@type": "Person",
-			"name": "Richmond Glenn Viloria",
-			"alternateName": "Shinitaii",
-			"jobTitle": "Jobseeker",
-			"url": "https://rgviloria.vercel.app",
-			"image": "https://rgviloria.vercel.app/pic.jpg",
-			"sameAs": [
-				"https://ph.linkedin.com/in/rgviloria",
-				"https://github.com/Shinitaii"
-			],
-			"alumniOf": {
-				"@type": "CollegeOrUniversity",
-				"name": "University of Makati"
-			}
-		})}
+		{@html JSON.stringify(personSchema)}
 	</script>
 	<script type="application/ld+json">
-		{JSON.stringify(faqSchema)}
+		{@html JSON.stringify(websiteSchema)}
+	</script>
+	<script type="application/ld+json">
+		{@html JSON.stringify(faqSchema)}
 	</script>
 </svelte:head>
 

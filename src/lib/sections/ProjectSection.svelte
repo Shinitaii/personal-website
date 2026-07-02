@@ -36,7 +36,7 @@
 		},
 		{
 			title: 'Deck',
-			period: 'Aug 2024 - Aug 2025',
+			period: 'Aug 2024 - Sept 2025',
 			role: 'Lead Developer',
 			platform: 'Website + Mobile + API',
 			tags: ['CodeIgniter', 'Flutter', 'Dart', 'Firebase', 'PHP', 'TypeScript', 'Express'],
