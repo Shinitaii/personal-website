@@ -18,6 +18,13 @@ Personal portfolio of Richmond Glenn Viloria, an aspiring software engineer focu
 - Certificates: https://rgviloria.vercel.app/#certificates
 - Skills: https://rgviloria.vercel.app/#skills
 
+## Project Pages
+
+- Moldify: https://rgviloria.vercel.app/projects/moldify
+- Deck: https://rgviloria.vercel.app/projects/deck
+- Through The Woods: https://rgviloria.vercel.app/projects/through-the-woods
+- Utilitool: https://rgviloria.vercel.app/projects/utilitool
+
 ## Skills
 
 - SvelteKit, Svelte, TypeScript, Vite

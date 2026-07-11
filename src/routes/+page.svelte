@@ -117,11 +117,13 @@
 
 <UpButton />
 <Header />
-<Intro />
-<WorkSection />
-<ProjectSection />
-<MediaSection />
-<FreelanceSection />
-<CertificateSection />
-<StackSection />
+<main>
+	<Intro />
+	<WorkSection />
+	<ProjectSection />
+	<MediaSection />
+	<FreelanceSection />
+	<CertificateSection />
+	<StackSection />
+</main>
 <Footer />
