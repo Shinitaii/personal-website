@@ -46,7 +46,7 @@
 					<span class="bg-primary border-bg dark:border-dark-bg absolute top-1.5 -left-[1.4rem] h-3 w-3 rounded-full border-2 sm:-left-[1.65rem]"></span>
 
 					<div class="mb-2 flex flex-wrap items-center gap-3">
-						<h2 class="text-xl font-bold sm:text-2xl">{entry.title}</h2>
+						<h3 class="text-xl font-bold sm:text-2xl">{entry.title}</h3>
 						<span class="bg-primary/20 dark:bg-dark-secondary/20 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide sm:text-xs">
 							{entry.period}
 						</span>

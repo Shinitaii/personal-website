@@ -1,0 +1,17 @@
+{
+	"name": "Richmond Glenn Viloria",
+	"short_name": "RG Viloria",
+	"alternative_name": "Shinitaii",
+	"description": "Portfolio of Richmond Glenn Viloria, an aspiring software engineer focused on website, mobile, and game development.",
+	"start_url": "/",
+	"display": "standalone",
+	"theme_color": "#4F6DF7",
+	"background_color": "#F8F8F8",
+	"icons": [
+		{
+			"src": "/favicon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml"
+		}
+	]
+}

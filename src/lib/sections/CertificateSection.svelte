@@ -35,7 +35,7 @@
 			<article class="bg-bg/90 dark:bg-lighter-dark-bg/80 border-border/70 dark:border-dark-border rounded-2xl border p-4 shadow-[0_16px_40px_rgba(86,105,137,0.1)] dark:shadow-[0_24px_65px_rgba(0,0,0,0.38)] sm:p-5">
 				<div class="mb-4 flex flex-col gap-2">
 					<div class="flex flex-wrap items-center gap-3">
-						<h2 class="text-xl font-bold sm:text-2xl">{certificate.title}</h2>
+						<h3 class="text-xl font-bold sm:text-2xl">{certificate.title}</h3>
 						<span class="bg-primary/20 dark:bg-dark-secondary/20 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide sm:text-xs">
 							{certificate.period}
 						</span>
