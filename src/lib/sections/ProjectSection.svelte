@@ -59,6 +59,16 @@
 						>
 							View Project Details
 						</a>
+						{#if project.liveUrl}
+							<a
+								href={project.liveUrl}
+								target="_blank"
+								rel="noopener"
+								class="border-border/70 dark:border-dark-border text-text dark:text-dark-text inline-flex rounded-full border px-4 py-2 text-sm font-semibold transition hover:scale-[1.02]"
+							>
+								Visit Live Site
+							</a>
+						{/if}
 						{#if project.githubUrl}
 							<a
 								href={project.githubUrl}

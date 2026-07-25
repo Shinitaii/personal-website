@@ -8,6 +8,7 @@ export type Project = {
 	description: string;
 	bullets: string[];
 	story?: string;
+	liveUrl?: string;
 	githubUrl?: string;
 	sortYear: number;
 	sortRank: number;
@@ -127,6 +128,7 @@ export const projects: Project[] = [
 		],
 		story:
 			"I didn't build this for other players first — I built it because I hit the wall myself. FarmRPG has plenty of quest data, but no real checklist beyond community spreadsheets, and those only track one questline at a time. While working through my own ATI quest, I kept having to manually sync the same inventory across sheets and check by hand whether I had enough for the next quest on either one. That wasn't going away on its own, so I built a tool that plans out questlines and shows exactly where anyone would wall, not just me. It's still in testing, but it's personal — I'm a FarmRPG player myself, and this is the tool I wished existed.",
+		liveUrl: 'https://farm-rpg-quest-tracker.pages.dev',
 		githubUrl: 'https://github.com/ffrpg-tech/quest-wall',
 		sortYear: 2026,
 		sortRank: 5

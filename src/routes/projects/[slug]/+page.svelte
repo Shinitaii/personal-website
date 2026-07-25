@@ -92,16 +92,28 @@
 				{/each}
 			</ul>
 
-			{#if project.githubUrl}
-				<a
-					href={project.githubUrl}
-					target="_blank"
-					rel="noopener"
-					class="bg-primary text-text mt-2 inline-flex w-fit rounded-full px-4 py-2 text-sm font-semibold transition hover:scale-[1.02]"
-				>
-					View on GitHub
-				</a>
-			{/if}
+			<div class="mt-2 flex flex-wrap gap-3">
+				{#if project.liveUrl}
+					<a
+						href={project.liveUrl}
+						target="_blank"
+						rel="noopener"
+						class="bg-primary text-text inline-flex w-fit rounded-full px-4 py-2 text-sm font-semibold transition hover:scale-[1.02]"
+					>
+						Visit Live Site
+					</a>
+				{/if}
+				{#if project.githubUrl}
+					<a
+						href={project.githubUrl}
+						target="_blank"
+						rel="noopener"
+						class="border-border/70 dark:border-dark-border text-text dark:text-dark-text inline-flex w-fit rounded-full border px-4 py-2 text-sm font-semibold transition hover:scale-[1.02]"
+					>
+						View on GitHub
+					</a>
+				{/if}
+			</div>
 		</div>
 	</div>
 </main>
