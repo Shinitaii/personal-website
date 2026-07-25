@@ -1,9 +1,11 @@
 <script lang="ts">
 	import Section from '$lib/Section.svelte';
+	import { formatPeriod, isOngoing } from '$lib/utils/period';
 
 	type WorkEntry = {
 		title: string;
-		period: string;
+		startPeriod: string;
+		endPeriod?: string;
 		role: string;
 		context: string;
 		tags: string[];
@@ -16,7 +18,8 @@
 	const workEntries: WorkEntry[] = [
 		{
 			title: 'ORTADEL Technologies Corporation',
-			period: 'Feb 2026 - May 2026',
+			startPeriod: '2026-02-01',
+			endPeriod: '2026-05-01',
 			role: 'Software Developer Intern',
 			context: 'Internship',
 			tags: ['Software Development', 'Internship'],
@@ -47,8 +50,14 @@
 
 					<div class="mb-2 flex flex-wrap items-center gap-3">
 						<h3 class="text-xl font-bold sm:text-2xl">{entry.title}</h3>
-						<span class="bg-primary/20 dark:bg-dark-secondary/20 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide sm:text-xs">
-							{entry.period}
+						<span
+							class={`rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide sm:text-xs ${
+								isOngoing(entry.endPeriod)
+									? 'bg-green-500/15 text-green-800 dark:bg-green-400/15 dark:text-green-300'
+									: 'bg-primary/20 dark:bg-dark-secondary/20'
+							}`}
+						>
+							{formatPeriod(entry.startPeriod, entry.endPeriod)}
 						</span>
 					</div>
 					<div class="mb-3 text-sm text-gray-600 dark:text-gray-300">

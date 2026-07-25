@@ -2,6 +2,7 @@
 	import Section from '$lib/Section.svelte';
 	import { mediaItems } from '$lib/media';
 	import { projects } from '$lib/data/projects';
+	import { formatPeriod, isOngoing } from '$lib/utils/period';
 
 	const hasMedia = (title: string) => mediaItems.some((item) => item.projectTitle === title);
 
@@ -33,8 +34,14 @@
 
 					<div class="mb-2 flex flex-wrap items-center gap-3">
 						<h3 class="text-xl font-bold sm:text-2xl">{project.title}</h3>
-						<span class="bg-primary/20 dark:bg-dark-secondary/20 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide sm:text-xs">
-							{project.period}
+						<span
+							class={`rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide sm:text-xs ${
+								isOngoing(project.endPeriod)
+									? 'bg-green-500/15 text-green-800 dark:bg-green-400/15 dark:text-green-300'
+									: 'bg-primary/20 dark:bg-dark-secondary/20'
+							}`}
+						>
+							{formatPeriod(project.startPeriod, project.endPeriod)}
 						</span>
 					</div>
 					<div class="mb-3 text-sm text-gray-600 dark:text-gray-300">

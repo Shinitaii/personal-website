@@ -1,7 +1,8 @@
 export type Project = {
 	slug: string;
 	title: string;
-	period: string;
+	startPeriod: string;
+	endPeriod?: string;
 	role: string;
 	platform: string;
 	tags: string[];
@@ -19,7 +20,7 @@ export const projects: Project[] = [
 	{
 		slug: 'listajuan',
 		title: 'ListaJuan',
-		period: 'June 2026 - Present',
+		startPeriod: '2026-06-01',
 		role: 'Solo Developer',
 		platform: 'Mobile',
 		tags: ['Svelte', 'Firebase', 'Firestore', 'Capacitor'],
@@ -39,7 +40,7 @@ export const projects: Project[] = [
 	{
 		slug: 'utilitool',
 		title: 'Utilitool',
-		period: 'May 2026 - Present',
+		startPeriod: '2026-05-01',
 		role: 'Solo Developer',
 		platform: 'Website + Mobile + API',
 		tags: ['Automation', 'Groq', 'Ollama', 'Node.js', 'Express', 'Firebase Functions', 'SvelteKit', 'Capacitor'],
@@ -58,7 +59,8 @@ export const projects: Project[] = [
 	{
 		slug: 'moldify',
 		title: 'Moldify',
-		period: 'Aug 2025 - May 2026',
+		startPeriod: '2025-08-01',
+		endPeriod: '2026-05-01',
 		role: 'Lead Developer',
 		platform: 'Website + Mobile + API',
 		tags: ['PyTorch', 'AWS', 'Firebase', 'Node.js', 'Express', 'Flask', 'TypeScript', 'Flutter'],
@@ -78,7 +80,8 @@ export const projects: Project[] = [
 	{
 		slug: 'deck',
 		title: 'Deck',
-		period: 'Aug 2024 - Aug 2025',
+		startPeriod: '2024-08-01',
+		endPeriod: '2025-08-01',
 		role: 'Lead Developer',
 		platform: 'Website + Mobile + API',
 		tags: ['CodeIgniter', 'Flutter', 'Dart', 'Firebase', 'PHP', 'TypeScript', 'Express'],
@@ -98,7 +101,8 @@ export const projects: Project[] = [
 	{
 		slug: 'through-the-woods',
 		title: 'Through The Woods',
-		period: 'Jan 2024 - May 2024',
+		startPeriod: '2024-01-01',
+		endPeriod: '2024-05-01',
 		role: 'Lead Developer',
 		platform: 'Mobile',
 		tags: ['Unity', 'C#', 'Game Systems'],
@@ -116,7 +120,7 @@ export const projects: Project[] = [
 	{
 		slug: 'quest-wall',
 		title: 'Quest Wall',
-		period: 'Jul 2026 - Present',
+		startPeriod: '2026-07-01',
 		role: 'Solo Developer',
 		platform: 'Website',
 		tags: ['SvelteKit', 'TypeScript', 'Tailwind CSS', 'Cloudflare Pages', 'Vitest', 'Playwright'],

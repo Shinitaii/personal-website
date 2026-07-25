@@ -2,6 +2,7 @@
 	import Header from '$lib/Header.svelte';
 	import Footer from '$lib/Footer.svelte';
 	import UpButton from '$lib/UpButton.svelte';
+	import { formatPeriod, isOngoing } from '$lib/utils/period';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -15,7 +16,7 @@
 		'@type': 'CreativeWork',
 		name: project.title,
 		description: project.description,
-		dateCreated: project.period,
+		dateCreated: project.startPeriod,
 		url: canonicalUrl,
 		keywords: project.tags.join(', '),
 		author: {
@@ -23,6 +24,7 @@
 			name: 'Richmond Glenn Viloria',
 			url: 'https://rgviloria.vercel.app'
 		},
+		...(project.endPeriod ? { dateModified: project.endPeriod } : {}),
 		...(project.githubUrl ? { codeRepository: project.githubUrl } : {})
 	});
 </script>
@@ -54,8 +56,14 @@
 
 			<div class="flex flex-wrap items-center gap-3">
 				<h1 class="text-2xl font-bold sm:text-3xl">{project.title}</h1>
-				<span class="bg-primary/20 dark:bg-dark-secondary/20 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide sm:text-xs">
-					{project.period}
+				<span
+					class={`rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide sm:text-xs ${
+						isOngoing(project.endPeriod)
+							? 'bg-green-500/15 text-green-800 dark:bg-green-400/15 dark:text-green-300'
+							: 'bg-primary/20 dark:bg-dark-secondary/20'
+					}`}
+				>
+					{formatPeriod(project.startPeriod, project.endPeriod)}
 				</span>
 			</div>
 
