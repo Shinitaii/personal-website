@@ -19,7 +19,7 @@
 				name: 'What does Richmond Glenn Viloria do?',
 				acceptedAnswer: {
 					'@type': 'Answer',
-					text: 'He is an aspiring software engineer focused on website, mobile, and game development, with experience across frontend, backend, and deployment.'
+					text: 'He is a software engineer focused on Node.js, TypeScript, and Firebase, working across full-stack and backend development, with experience in website, mobile, and game development.'
 				}
 			},
 			{
@@ -46,30 +46,33 @@
 		'@type': 'Person',
 		name: 'Richmond Glenn Viloria',
 		alternateName: 'Shinitaii',
-		jobTitle: 'Aspiring Software Engineer',
+		jobTitle: 'Software Engineer',
 		description:
-			'Aspiring software engineer focused on website, mobile, and game development, with experience across frontend, backend, and deployment.',
+			'Software engineer focused on Node.js, TypeScript, and Firebase — full-stack and backend development across website, mobile, and game projects.',
 		url: 'https://rgviloria.vercel.app',
 		image: 'https://rgviloria.vercel.app/pic.jpg',
-		sameAs: ['https://ph.linkedin.com/in/rgviloria', 'https://github.com/Shinitaii'],
+		sameAs: ['https://www.linkedin.com/in/rgviloria/', 'https://github.com/Shinitaii'],
 		alumniOf: {
 			'@type': 'CollegeOrUniversity',
 			name: 'University of Makati'
 		},
 		knowsAbout: [
+			'Node.js',
+			'TypeScript',
+			'Firebase',
 			'SvelteKit',
 			'Svelte',
-			'TypeScript',
-			'Vite',
-			'Node.js',
 			'Express',
-			'Firebase',
-			'Flutter',
 			'React',
+			'MongoDB',
+			'Flutter',
 			'AWS',
 			'GitHub Actions',
 			'PostgreSQL',
-			'MySQL'
+			'MySQL',
+			'RBAC',
+			'JWT Authentication',
+			'Multi-Tenant Architecture'
 		]
 	};
 
@@ -86,26 +89,26 @@
 </script>
 
 <svelte:head>
-	<title>Richmond Glenn Viloria | Aspiring Software Engineer</title>
+	<title>Richmond Glenn Viloria | Software Engineer</title>
 	<meta
 		name="description"
-		content="Portfolio of Richmond Glenn Viloria, an aspiring software engineer focused on website, mobile, and game development, with work experience, projects, freelance work, and technical skills."
+		content="Portfolio of Richmond Glenn Viloria, a software engineer focused on Node.js, TypeScript, and Firebase — full-stack and backend development, with work experience, projects, freelance work, and technical skills."
 	/>
 	<meta name="robots" content="index,follow" />
-	<meta property="og:title" content="Richmond Glenn Viloria | Aspiring Software Engineer" />
+	<meta property="og:title" content="Richmond Glenn Viloria | Software Engineer" />
 	<meta
 		property="og:description"
-		content="Portfolio of Richmond Viloria, an aspiring software engineer focused on website, mobile, and game development."
+		content="Portfolio of Richmond Glenn Viloria, a software engineer focused on Node.js, TypeScript, and Firebase — full-stack and backend development."
 	/>
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="https://rgviloria.vercel.app/pic.jpg" />
-	<meta property="og:image:alt" content="Richmond Glenn Viloria, aspiring software engineer" />
+	<meta property="og:image:alt" content="Richmond Glenn Viloria, software engineer" />
 	<meta property="og:site_name" content="Richmond Glenn Viloria" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Richmond Glenn Viloria | Aspiring Software Engineer" />
+	<meta name="twitter:title" content="Richmond Glenn Viloria | Software Engineer" />
 	<meta
 		name="twitter:description"
-		content="Portfolio of Richmond Glenn Viloria, an aspiring software engineer focused on website, mobile, and game development."
+		content="Portfolio of Richmond Glenn Viloria, a software engineer focused on Node.js, TypeScript, and Firebase — full-stack and backend development."
 	/>
 	<meta name="twitter:image" content="https://rgviloria.vercel.app/pic.jpg" />
 	<link rel="canonical" href="https://rgviloria.vercel.app" />
