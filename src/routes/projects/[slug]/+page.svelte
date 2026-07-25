@@ -72,6 +72,15 @@
 				{/each}
 			</div>
 
+			{#if project.story}
+				<div class="border-primary/60 dark:border-dark-secondary/60 border-l-4 pl-4">
+					<p class="text-text/70 dark:text-dark-text/70 mb-1 text-xs font-semibold tracking-wide uppercase">
+						Why I built this
+					</p>
+					<p class="text-sm leading-relaxed italic sm:text-base">{project.story}</p>
+				</div>
+			{/if}
+
 			<p class="text-sm leading-relaxed sm:text-base">{project.description}</p>
 
 			<h2 class="border-text dark:border-dark-tertiary self-start border-b text-lg font-bold sm:text-xl">
